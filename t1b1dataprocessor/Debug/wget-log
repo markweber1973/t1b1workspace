@@ -1,9 +1,0 @@
-Spider mode enabled. Check if remote file exists.
---2013-10-19 17:00:38--  http://www.t1b1.nl/rename.php
-Resolving www.t1b1.nl (www.t1b1.nl)... 2a03:3c00:a002:141::1009, 141.138.168.32
-Connecting to www.t1b1.nl (www.t1b1.nl)|2a03:3c00:a002:141::1009|:80... connected.
-HTTP request sent, awaiting response... 200 `wget-log'
-Length: unspecified [text/html]
-Remote file exists and could contain further links,
-but recursion is disabled -- not retrieving.
-
