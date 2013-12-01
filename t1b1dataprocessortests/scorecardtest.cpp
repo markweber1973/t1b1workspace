@@ -26,7 +26,7 @@ TEST(ScoreCardTest, SmallerThan)
   twoBoulderScore->TopHit(1);
   oneScoreCard->AddScore(twoBoulderScore);
   
-
+ 
   boost::shared_ptr<Climber> twoClimber(new Climber());
   twoClimber->SetFirstname("Piet");
   twoClimber->SetLastname("Snot");
