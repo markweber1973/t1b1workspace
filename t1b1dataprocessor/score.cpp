@@ -1,5 +1,5 @@
-#include "score.h"
-#include "assert.h"
+#include <score.h>
+#include <assert.h>
 #include <iostream>
 
 namespace t1b1dataprocessor
@@ -7,10 +7,8 @@ namespace t1b1dataprocessor
 
 Score::Score()
 {
-  m_topReached = false;
-  m_bonusReached = false;
-  m_topAttempts = 0;
-  m_bonusAttempts = 0;
+  m_topScore.reset(new SubScore());
+  m_bonusScore.reset(new SubScore());
 }
 
 Score::~Score()
@@ -19,13 +17,13 @@ Score::~Score()
 
 bool Score::ScoreIsValid() const
 {
-  if (m_topReached)
+  if (m_topScore->GetHits() == 1)
   {
-    return (m_bonusReached && (m_topAttempts > 0) && (m_bonusAttempts > 0));
+    return (GetBonusReached() && (GetTopAttempts() > 0) && (GetBonusAttempts() > 0));
   }
-  else if (m_bonusReached)
+  else if (GetBonusReached())
   {
-    return (m_bonusAttempts > 0);
+    return (GetBonusAttempts() > 0);
   }
   else
   {
@@ -36,15 +34,15 @@ bool Score::ScoreIsValid() const
 bool Score::operator==(const Score& otherScore) const
 {
   assert(ScoreIsValid() && otherScore.ScoreIsValid());
-  if (m_topReached && otherScore.GetTopReached())
+  if (GetTopReached() && otherScore.GetTopReached())
   {
-    return ((m_topAttempts == otherScore.GetTopAttempts()) && (m_bonusAttempts == otherScore.GetBonusAttempts()));
+    return ((GetTopAttempts() == otherScore.GetTopAttempts()) && (GetBonusAttempts() == otherScore.GetBonusAttempts()));
   }
-  else if ((m_bonusReached && !m_topReached) && (otherScore.GetBonusReached() && !otherScore.GetTopReached()))
+  else if ((GetBonusReached() && !GetTopReached()) && (otherScore.GetBonusReached() && !otherScore.GetTopReached()))
   {
-    return (m_bonusAttempts == otherScore.GetBonusAttempts());
+    return (GetBonusAttempts() == otherScore.GetBonusAttempts());
   }
-  else if (!m_bonusReached && !m_topReached && !otherScore.GetBonusReached() && !otherScore.GetTopReached())
+  else if (!GetBonusReached() && !GetTopReached() && !otherScore.GetBonusReached() && !otherScore.GetTopReached())
   {
     return true;
   }
@@ -61,17 +59,17 @@ bool Score::operator!=(const Score& otherScore) const
 
 bool Score::operator<(const Score& otherScore) const
 {
-  if (m_topReached && otherScore.GetTopReached())
+  if (GetTopReached() && otherScore.GetTopReached())
   {
-    if (m_topAttempts > otherScore.GetTopAttempts())
+    if (GetTopAttempts() > otherScore.GetTopAttempts())
     {
       return true;
     }
-    else if (m_topAttempts < otherScore.GetTopAttempts())
+    else if (GetTopAttempts() < otherScore.GetTopAttempts())
     {
       return false;
     }
-    else if (m_bonusAttempts > otherScore.GetBonusAttempts())
+    else if (GetBonusAttempts() > otherScore.GetBonusAttempts())
     {
       return true;
     }
@@ -80,25 +78,25 @@ bool Score::operator<(const Score& otherScore) const
       return false;      
     }
   }
-  else if (!m_topReached && otherScore.GetTopReached())
+  else if (!GetTopReached() && otherScore.GetTopReached())
   {
     return true;
   }
-  else if (m_topReached && !otherScore.GetTopReached())
+  else if (GetTopReached() && !otherScore.GetTopReached())
   {
     return false;
   }
-  else if (!m_bonusReached && otherScore.GetBonusReached())
+  else if (!GetBonusReached() && otherScore.GetBonusReached())
   {
     return true;   
   }
-  else if (m_bonusReached && !otherScore.GetBonusReached())    
+  else if (GetBonusReached() && !otherScore.GetBonusReached())    
   {
     return false;
   }
-  else if (m_bonusReached && otherScore.GetBonusReached()) 
+  else if (GetBonusReached() && otherScore.GetBonusReached()) 
   {
-    if (m_bonusAttempts > otherScore.GetBonusAttempts())
+    if (GetBonusAttempts() > otherScore.GetBonusAttempts())
     {    
       return true;
     }
@@ -120,57 +118,61 @@ bool Score::operator>(const Score& otherScore) const
 
 void Score::SetTopReached()
 {
-  m_topReached = true;
+  assert (0 == m_topScore->GetHits());
+  m_topScore->AddHit();
 }
 
 void Score::SetBonusReached()
 {
-  m_bonusReached = true;
+  assert (0 == m_bonusScore->GetHits());
+  m_bonusScore->AddHit();
 }
 
 bool Score::GetTopReached() const
 {
-  return (m_topReached);
+  return (1 == m_topScore->GetHits());
 }
 
 bool Score::GetBonusReached() const
 {
-  return (m_bonusReached);
+  return (1 == m_bonusScore->GetHits());
 }
 
 void Score::SetTopAttempts(unsigned int attempts)
 {
-  m_topAttempts = attempts;
+  assert(0 == m_topScore->GetAttempts());
+  m_topScore->AddAttempts(attempts);
 }
 
 void Score::SetBonusAttempts(unsigned int attempts)
 {
-  m_bonusAttempts = attempts;
+  assert(0 == m_bonusScore->GetAttempts());
+  m_bonusScore->AddAttempts(attempts);
 }
 
 unsigned int Score::GetTopAttempts() const
 {
-  return m_topAttempts;
+  return m_topScore->GetAttempts();
 }
 
 unsigned int Score::GetBonusAttempts() const
 {
-  return m_bonusAttempts;
+  return m_bonusScore->GetAttempts();
 }
 
 void Score::printOn(std::ostream& strm) const
 {
 	strm << "<score>" << std::endl;
-  strm << "<topped>";   if (m_topReached) {strm << "Y";} else {strm << "N";};	  strm << "</topped>"   << std::endl;
-	strm << "<bonussed>";	if (m_bonusReached) {strm << "Y";} else {strm << "N";};	strm << "</bonussed>" << std::endl;
-	strm << "<topattempts>"    << m_topAttempts   << "</topattempts>"    << std::endl;
-	strm << "<bonusattempts>"    << m_bonusAttempts   << "</bonusattempts>"    << std::endl;
+  strm << "<topped>";   if (GetTopReached()) {strm << "Y";} else {strm << "N";};	  strm << "</topped>"   << std::endl;
+	strm << "<bonussed>";	if (GetBonusReached()) {strm << "Y";} else {strm << "N";};	strm << "</bonussed>" << std::endl;
+	strm << "<topattempts>"    << GetTopAttempts()   << "</topattempts>"    << std::endl;
+	strm << "<bonusattempts>"    << GetBonusAttempts()   << "</bonusattempts>"    << std::endl;
 	
   strm << "<stringvalue>T";
-  if (m_topReached) strm << m_topAttempts;
+  if (GetTopReached()) strm << GetTopAttempts();
   else strm << "-";
 	strm << "B";  
-  if (m_bonusReached) strm << m_bonusAttempts;
+  if (GetBonusReached()) strm << GetBonusAttempts();
   else strm << "-" << std::endl;;
 	strm << "</stringvalue>" << std::endl;  
 	strm << "</score>" << std::endl;	

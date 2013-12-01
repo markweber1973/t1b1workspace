@@ -1,8 +1,8 @@
-#include "subscore.h"
+#include <subscore.h>
 
 namespace t1b1dataprocessor
 {
-
+  
 bool SubScore::operator==(const SubScore& otherScore) const
 {
   return (m_hits == otherScore.GetHits()) && (m_attempts == otherScore.GetAttempts());

@@ -30,7 +30,6 @@ public:
   std::string GetFirstname() const;	
   void SetLastname(std::string name);
   std::string GetLastname() const;	  
-  void SetStartnumber(unsigned int number);
   void SetNationality(std::string nationality);
   std::string GetNationality() const;
   

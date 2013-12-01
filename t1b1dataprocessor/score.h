@@ -1,9 +1,12 @@
 #ifndef SCORE_H
 #define SCORE_H
+
 #include <string>
+#include <subscore.h>
+#include <boost/shared_ptr.hpp>
+
 namespace t1b1dataprocessor
 {
-
 class Score {
 
 public:
@@ -29,12 +32,9 @@ public:
   bool ScoreIsValid() const;
   std::string Score2String();
 
-private:
-  
-  bool m_topReached;
-  unsigned int m_topAttempts;
-  bool m_bonusReached;
-  unsigned int m_bonusAttempts;
+  private: 
+  boost::shared_ptr<SubScore> m_topScore;
+  boost::shared_ptr<SubScore> m_bonusScore;  
 };
 
 }

@@ -15,8 +15,6 @@
     <File Name="databaseconnector.cpp"/>
     <File Name="enrollment.h"/>
     <File Name="enrollment.cpp"/>
-    <File Name="score.h"/>
-    <File Name="score.cpp"/>
     <File Name="scorecard.h"/>
     <File Name="scorecard.cpp"/>
     <File Name="enrolledclimber.h"/>
@@ -24,13 +22,15 @@
     <File Name="boulderscore.h"/>
     <File Name="boulderscore.cpp"/>
     <File Name="totalscore.h"/>
+    <File Name="primitivescore.h"/>
+    <File Name="primitivescore.cpp"/>
     <File Name="totalscore.cpp"/>
-    <File Name="subscore.h"/>
-    <File Name="subscore.cpp"/>
+    <File Name="primitivetotalscore.h"/>
+    <File Name="primitivetotalscore.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g" Required="yes" PreCompiledHeader="">
+      <Compiler Options="-g -std=c++0x" Required="yes" PreCompiledHeader="">
         <IncludePath Value="."/>
       </Compiler>
       <Linker Options="" Required="yes">

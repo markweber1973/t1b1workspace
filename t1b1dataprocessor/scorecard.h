@@ -3,9 +3,9 @@
 
 #include <vector>
 #include <boost/shared_ptr.hpp>
-#include <enrolledclimber.h>
-#include <boulderscore.h>
-#include <totalscore.h>
+#include "enrolledclimber.h"
+#include "boulderscore.h"
+#include "totalscore.h"
 
 
 namespace t1b1dataprocessor
@@ -25,11 +25,13 @@ public:
   void printOn(std::ostream&) const;
   
   void AddScore(boost::shared_ptr<BoulderScore> score);
+  std::vector< boost::shared_ptr<BoulderScore> > GetHitlist() const;
+  
+  boost::shared_ptr<TotalScore> GetTotalScore();
+ 
 private:
   std::vector< boost::shared_ptr<BoulderScore> > m_hitlist;
-  boost::shared_ptr<EnrolledClimber> m_climber;
-  boost::shared_ptr<TotalScore> m_totalScore;
-  
+  boost::shared_ptr<EnrolledClimber> m_climber;    
 };
 
 }

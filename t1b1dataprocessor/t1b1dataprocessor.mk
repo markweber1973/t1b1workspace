@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Mark
-Date                   :=11/02/2013
+Date                   :=12/01/2013
 CodeLitePath           :="/home/mark/.codelite"
 LinkerName             :=g++
 ArchiveTool            :=ar rcus
@@ -36,7 +36,7 @@ ObjectSwitch           :=-o
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
 MakeDirCommand         :=mkdir -p
-CmpOptions             := -g $(Preprocessors)
+CmpOptions             := -g -std=c++0x $(Preprocessors)
 LinkOptions            :=  
 IncludePath            :=  "$(IncludeSwitch)." "$(IncludeSwitch)." 
 RcIncludePath          :=
@@ -48,7 +48,7 @@ LibPath                := "$(LibraryPathSwitch)/usr/lib"
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects=$(IntermediateDirectory)/main$(ObjectSuffix) $(IntermediateDirectory)/climber$(ObjectSuffix) $(IntermediateDirectory)/databaseconnector$(ObjectSuffix) $(IntermediateDirectory)/enrollment$(ObjectSuffix) $(IntermediateDirectory)/score$(ObjectSuffix) $(IntermediateDirectory)/scorecard$(ObjectSuffix) $(IntermediateDirectory)/enrolledclimber$(ObjectSuffix) $(IntermediateDirectory)/boulderscore$(ObjectSuffix) $(IntermediateDirectory)/totalscore$(ObjectSuffix) $(IntermediateDirectory)/subscore$(ObjectSuffix) \
+Objects=$(IntermediateDirectory)/main$(ObjectSuffix) $(IntermediateDirectory)/climber$(ObjectSuffix) $(IntermediateDirectory)/databaseconnector$(ObjectSuffix) $(IntermediateDirectory)/enrollment$(ObjectSuffix) $(IntermediateDirectory)/scorecard$(ObjectSuffix) $(IntermediateDirectory)/enrolledclimber$(ObjectSuffix) $(IntermediateDirectory)/boulderscore$(ObjectSuffix) $(IntermediateDirectory)/primitivescore$(ObjectSuffix) $(IntermediateDirectory)/totalscore$(ObjectSuffix) $(IntermediateDirectory)/primitivetotalscore$(ObjectSuffix) \
 	
 
 ##
@@ -101,14 +101,6 @@ $(IntermediateDirectory)/enrollment$(DependSuffix): enrollment.cpp
 $(IntermediateDirectory)/enrollment$(PreprocessSuffix): enrollment.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/enrollment$(PreprocessSuffix) "/home/mark/t1b1workspace/t1b1dataprocessor/enrollment.cpp"
 
-$(IntermediateDirectory)/score$(ObjectSuffix): score.cpp $(IntermediateDirectory)/score$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/mark/t1b1workspace/t1b1dataprocessor/score.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/score$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/score$(DependSuffix): score.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/score$(ObjectSuffix) -MF$(IntermediateDirectory)/score$(DependSuffix) -MM "/home/mark/t1b1workspace/t1b1dataprocessor/score.cpp"
-
-$(IntermediateDirectory)/score$(PreprocessSuffix): score.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/score$(PreprocessSuffix) "/home/mark/t1b1workspace/t1b1dataprocessor/score.cpp"
-
 $(IntermediateDirectory)/scorecard$(ObjectSuffix): scorecard.cpp $(IntermediateDirectory)/scorecard$(DependSuffix)
 	$(CompilerName) $(SourceSwitch) "/home/mark/t1b1workspace/t1b1dataprocessor/scorecard.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/scorecard$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/scorecard$(DependSuffix): scorecard.cpp
@@ -133,6 +125,14 @@ $(IntermediateDirectory)/boulderscore$(DependSuffix): boulderscore.cpp
 $(IntermediateDirectory)/boulderscore$(PreprocessSuffix): boulderscore.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/boulderscore$(PreprocessSuffix) "/home/mark/t1b1workspace/t1b1dataprocessor/boulderscore.cpp"
 
+$(IntermediateDirectory)/primitivescore$(ObjectSuffix): primitivescore.cpp $(IntermediateDirectory)/primitivescore$(DependSuffix)
+	$(CompilerName) $(SourceSwitch) "/home/mark/t1b1workspace/t1b1dataprocessor/primitivescore.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/primitivescore$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/primitivescore$(DependSuffix): primitivescore.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/primitivescore$(ObjectSuffix) -MF$(IntermediateDirectory)/primitivescore$(DependSuffix) -MM "/home/mark/t1b1workspace/t1b1dataprocessor/primitivescore.cpp"
+
+$(IntermediateDirectory)/primitivescore$(PreprocessSuffix): primitivescore.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/primitivescore$(PreprocessSuffix) "/home/mark/t1b1workspace/t1b1dataprocessor/primitivescore.cpp"
+
 $(IntermediateDirectory)/totalscore$(ObjectSuffix): totalscore.cpp $(IntermediateDirectory)/totalscore$(DependSuffix)
 	$(CompilerName) $(SourceSwitch) "/home/mark/t1b1workspace/t1b1dataprocessor/totalscore.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/totalscore$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/totalscore$(DependSuffix): totalscore.cpp
@@ -141,13 +141,13 @@ $(IntermediateDirectory)/totalscore$(DependSuffix): totalscore.cpp
 $(IntermediateDirectory)/totalscore$(PreprocessSuffix): totalscore.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/totalscore$(PreprocessSuffix) "/home/mark/t1b1workspace/t1b1dataprocessor/totalscore.cpp"
 
-$(IntermediateDirectory)/subscore$(ObjectSuffix): subscore.cpp $(IntermediateDirectory)/subscore$(DependSuffix)
-	$(CompilerName) $(SourceSwitch) "/home/mark/t1b1workspace/t1b1dataprocessor/subscore.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/subscore$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/subscore$(DependSuffix): subscore.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/subscore$(ObjectSuffix) -MF$(IntermediateDirectory)/subscore$(DependSuffix) -MM "/home/mark/t1b1workspace/t1b1dataprocessor/subscore.cpp"
+$(IntermediateDirectory)/primitivetotalscore$(ObjectSuffix): primitivetotalscore.cpp $(IntermediateDirectory)/primitivetotalscore$(DependSuffix)
+	$(CompilerName) $(SourceSwitch) "/home/mark/t1b1workspace/t1b1dataprocessor/primitivetotalscore.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/primitivetotalscore$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/primitivetotalscore$(DependSuffix): primitivetotalscore.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/primitivetotalscore$(ObjectSuffix) -MF$(IntermediateDirectory)/primitivetotalscore$(DependSuffix) -MM "/home/mark/t1b1workspace/t1b1dataprocessor/primitivetotalscore.cpp"
 
-$(IntermediateDirectory)/subscore$(PreprocessSuffix): subscore.cpp
-	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/subscore$(PreprocessSuffix) "/home/mark/t1b1workspace/t1b1dataprocessor/subscore.cpp"
+$(IntermediateDirectory)/primitivetotalscore$(PreprocessSuffix): primitivetotalscore.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/primitivetotalscore$(PreprocessSuffix) "/home/mark/t1b1workspace/t1b1dataprocessor/primitivetotalscore.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
@@ -167,9 +167,6 @@ clean:
 	$(RM) $(IntermediateDirectory)/enrollment$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/enrollment$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/enrollment$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/score$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/score$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/score$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/scorecard$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/scorecard$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/scorecard$(PreprocessSuffix)
@@ -179,12 +176,15 @@ clean:
 	$(RM) $(IntermediateDirectory)/boulderscore$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/boulderscore$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/boulderscore$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/primitivescore$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/primitivescore$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/primitivescore$(PreprocessSuffix)
 	$(RM) $(IntermediateDirectory)/totalscore$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/totalscore$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/totalscore$(PreprocessSuffix)
-	$(RM) $(IntermediateDirectory)/subscore$(ObjectSuffix)
-	$(RM) $(IntermediateDirectory)/subscore$(DependSuffix)
-	$(RM) $(IntermediateDirectory)/subscore$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/primitivetotalscore$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/primitivetotalscore$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/primitivetotalscore$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 
 

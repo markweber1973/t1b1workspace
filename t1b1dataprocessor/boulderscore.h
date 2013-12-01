@@ -1,8 +1,8 @@
 #ifndef BOULDERSCORE_H
 #define BOULDERSCORE_H
 
-#include <boost/shared_ptr.hpp>
-#include "score.h"
+#include <boost/scoped_ptr.hpp>
+#include "primitivescore.h"
 
 namespace t1b1dataprocessor
 {
@@ -10,22 +10,27 @@ namespace t1b1dataprocessor
 class BoulderScore {
 
 public:
-	BoulderScore();
+	BoulderScore(unsigned int boulderId, bool finished);
 	~BoulderScore();
 
   friend std::ostream& operator<<(std::ostream& os, const BoulderScore& aScore);
   void printOn(std::ostream&) const;
+  
+  void TopHit(const unsigned int attempts);
+  bool IsTopHit() const {return m_topScore->IsHit();};
+  unsigned int GetTopAttempts() const {return m_topScore->GetAttempts();};
+  
+  void BonusHit(const unsigned int attempts);
+  bool IsBonusHit() const {return m_bonusScore->IsHit();};
+  unsigned int GetBonusAttempts() const {return m_bonusScore->GetAttempts();};
 
-  void SetNumber(unsigned int number);
-  void SetAttempts(unsigned int attempts); 
-  void SetFinished();
-  void SetScore(boost::shared_ptr<Score> score);
+  unsigned int GetBoulderId() const {return m_boulderId;} ;
 
 private:
-  boost::shared_ptr<Score> m_score;
+  boost::scoped_ptr<PrimitiveScore> m_bonusScore;
+  boost::scoped_ptr<PrimitiveScore> m_topScore;
   bool m_finished;
-  unsigned int m_attempts;
-  unsigned int m_number;
+  unsigned int m_boulderId;
 };
 
 }
