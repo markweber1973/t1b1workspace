@@ -25,6 +25,7 @@ public:
   unsigned int GetBonusAttempts() const {return m_bonusScore->GetAttempts();};
 
   unsigned int GetBoulderId() const {return m_boulderId;} ;
+  bool IsFinished();
 
 private:
   boost::scoped_ptr<PrimitiveScore> m_bonusScore;

@@ -14,6 +14,8 @@ public:
   
   bool operator<(const PrimitiveTotalScore& otherPrimitiveTotalScore) const;
   bool operator==(const PrimitiveTotalScore& otherPrimitiveTotalScore) const;
+  bool operator>(const PrimitiveTotalScore& otherPrimitiveTotalScore) const;
+  bool operator!=(const PrimitiveTotalScore& otherPrimitiveTotalScore) const;
   
   friend std::ostream& operator<<(std::ostream& os, const PrimitiveTotalScore& aPrimitiveTotalScore);
   void printOn(std::ostream&) const;

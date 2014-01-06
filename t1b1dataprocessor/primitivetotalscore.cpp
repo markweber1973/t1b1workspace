@@ -29,7 +29,17 @@ bool PrimitiveTotalScore::operator<(const PrimitiveTotalScore& otherPrimitiveTot
 
 bool PrimitiveTotalScore::operator==(const PrimitiveTotalScore& otherPrimitiveTotalScore) const
 {  
-  return ((m_hits && otherPrimitiveTotalScore.m_hits) && (m_attempts == otherPrimitiveTotalScore.m_attempts));
+  return ((m_hits == otherPrimitiveTotalScore.m_hits) && (m_attempts == otherPrimitiveTotalScore.m_attempts));
+}
+
+bool PrimitiveTotalScore::operator!=(const PrimitiveTotalScore& otherPrimitiveTotalScore) const
+{  
+  return (!(*this == otherPrimitiveTotalScore));
+}
+
+bool PrimitiveTotalScore::operator>(const PrimitiveTotalScore& otherPrimitiveTotalScore) const
+{  
+  return ((*this != otherPrimitiveTotalScore) && (!(*this<otherPrimitiveTotalScore)));
 }
 
 void PrimitiveTotalScore::printOn(std::ostream& strm) const

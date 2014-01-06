@@ -19,7 +19,9 @@ public:
 	~TotalScore() {};
   
   bool operator==(const TotalScore& otherScore) const;
+  bool operator!=(const TotalScore& otherScore) const;  
   bool operator<(const TotalScore& otherScore) const;
+  bool operator>(const TotalScore& otherScore) const;  
 
   friend std::ostream& operator<<(std::ostream& os, const TotalScore& aScore);
   void printOn(std::ostream&) const;

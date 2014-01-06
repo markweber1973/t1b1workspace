@@ -30,7 +30,10 @@ bool PrimitiveScore::operator<(const PrimitiveScore& otherPrimitiveScore) const
 
 bool PrimitiveScore::operator==(const PrimitiveScore& otherPrimitiveScore) const
 {  
-  return ((m_hit && otherPrimitiveScore.m_hit) && (m_attempts == otherPrimitiveScore.m_attempts));
+  return (
+    (m_hit && otherPrimitiveScore.m_hit) && (m_attempts == otherPrimitiveScore.m_attempts) ||
+    (!m_hit && !otherPrimitiveScore.m_hit)	
+	);
 }
 
 void PrimitiveScore::printOn(std::ostream& strm) const

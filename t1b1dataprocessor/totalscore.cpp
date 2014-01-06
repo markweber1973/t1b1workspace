@@ -30,6 +30,10 @@ bool TotalScore::operator==(const TotalScore& otherScore) const
          ((*m_bonusScore == *otherScore.m_bonusScore)));
 }
 
+bool TotalScore::operator!=(const TotalScore& otherScore) const
+{
+  return (!(*m_topScore == *otherScore.m_topScore));
+}
 
 bool TotalScore::operator<(const TotalScore& otherScore) const
 {
@@ -39,6 +43,11 @@ bool TotalScore::operator<(const TotalScore& otherScore) const
      (*m_topScore == *otherScore.m_topScore) && 
      (*m_bonusScore < *otherScore.m_bonusScore)
     ));
+}
+
+bool TotalScore::operator>(const TotalScore& otherScore) const
+{
+	return ((!(*m_topScore < *otherScore.m_topScore)) && (*m_topScore != *otherScore.m_topScore));
 }
 
 void TotalScore::printOn(std::ostream& strm) const

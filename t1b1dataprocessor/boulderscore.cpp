@@ -18,6 +18,11 @@ BoulderScore::~BoulderScore()
 {
 }
 
+bool BoulderScore::IsFinished()
+{
+  return m_finished;
+}
+
 void BoulderScore::TopHit(const unsigned int attempts)
 {
   if (attempts == 0) throw invalid_argument("TopHit with 0 attempts is invalid");
@@ -36,7 +41,7 @@ void BoulderScore::printOn(std::ostream& strm) const
 	strm << "<boulderscore>" << std::endl;
   strm << "<id>"    << m_boulderId   << "</id>"    << std::endl;
   strm << "<finished>";   if (m_finished) {strm << "Y";} else {strm << "N";};	  strm << "</finished>"   << std::endl;
-	strm << *m_topScore << *m_bonusScore << std::endl;
+	strm << "<value>" << *m_topScore << *m_bonusScore << "</value>" << std::endl;
 	strm << "</boulderscore>" << std::endl;	
 }
 

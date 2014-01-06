@@ -10,6 +10,26 @@ ScoreCard::ScoreCard(boost::shared_ptr<EnrolledClimber> enrolledClimber)
   m_climber = enrolledClimber;
 }
 
+ScoreCard::ScoreCard(boost::shared_ptr<EnrolledClimber> enrolledClimber, unsigned int nrOfBoulders)
+{
+  m_climber = enrolledClimber;
+  for (unsigned int x=1; x<=nrOfBoulders; x++)
+  {
+	  boost::shared_ptr<BoulderScore> localBoulderScore (new BoulderScore(x, false));
+	  m_boulderScoreMap.insert(BoulderScorePair(x, localBoulderScore));  
+  }
+}
+
+ScoreCard::ScoreCard(boost::shared_ptr<EnrolledClimber> enrolledClimber, unsigned int nrOfBoulders, unsigned int polePosition): m_polePosition(polePosition), m_isEmpty(true), m_rank(0)
+{
+  m_climber = enrolledClimber;
+  for (unsigned int x=1; x<=nrOfBoulders; x++)
+  {
+	  boost::shared_ptr<BoulderScore> localBoulderScore (new BoulderScore(x, false));
+	  m_boulderScoreMap.insert(BoulderScorePair(x, localBoulderScore));  
+  }
+}
+
 ScoreCard::~ScoreCard()
 {
 }
@@ -19,25 +39,29 @@ class Criterium
 public:
     bool operator()(const BoulderScore& left, const BoulderScore& right)const 
     { 
-      return left.GetBoulderId()  > right.GetBoulderId();
+      return left.GetBoulderId()  < right.GetBoulderId();
     };
 };
 
 void ScoreCard::AddScore(boost::shared_ptr<BoulderScore> score)
 {
-  m_hitlist.push_back(score);
-  
-  Criterium criterium;
-  std::sort(m_hitlist.begin(), m_hitlist.end(),
-     [&criterium] (const boost::shared_ptr<BoulderScore> &l, const boost::shared_ptr<BoulderScore> &r)
-     {
-         return criterium(*l.get(), *r.get());
-     });
+  if (score->IsFinished()) m_isEmpty = false;
+  m_boulderScoreMap[score->GetBoulderId()] = score;
 }
 
-std::vector< boost::shared_ptr<BoulderScore> > ScoreCard::GetHitlist() const
+bool ScoreCard::IsEmpty()
 {
-  return m_hitlist;
+  return m_isEmpty;
+}
+
+void ScoreCard::SetRank(unsigned int rank)
+{
+  m_rank = rank;
+}
+
+unsigned int ScoreCard::GetRank()
+{
+  return(m_rank);
 }
 
 bool ScoreCard::operator==(const ScoreCard& otherScoreCard) const
@@ -50,9 +74,28 @@ bool ScoreCard::operator!=(const ScoreCard& otherScoreCard) const
   return !(*this == otherScoreCard);
 }
 
-boost::shared_ptr<TotalScore> ScoreCard::GetTotalScore()
+boost::shared_ptr<TotalScore> ScoreCard::GetTotalScore() const
 {
-  
+  unsigned int nrOfTopHits = 0;
+  unsigned int nrOfBonusHits = 0;
+  unsigned int nrOfTopAttempts = 0;
+  unsigned int nrOfBonusAttempts = 0;
+   
+  BOOST_FOREACH(BoulderScorePair localScore, m_boulderScoreMap)
+  {
+    if (localScore.second->IsTopHit())
+    {
+      nrOfTopHits++;
+      nrOfTopAttempts+=localScore.second->GetTopAttempts();
+    }
+    if (localScore.second->IsBonusHit())
+    {
+      nrOfBonusHits++;
+      nrOfBonusAttempts+=localScore.second->GetBonusAttempts();
+    }
+  }
+  boost::shared_ptr<TotalScore> thisTotal (new TotalScore(nrOfTopHits, nrOfTopAttempts, nrOfBonusHits, nrOfBonusAttempts));
+  return thisTotal;  
 }
 
 bool ScoreCard::operator<(const ScoreCard& otherScoreCard) const
@@ -62,41 +105,48 @@ bool ScoreCard::operator<(const ScoreCard& otherScoreCard) const
   unsigned int nrOfTopAttempts = 0;
   unsigned int nrOfBonusAttempts = 0;
   
-  BOOST_FOREACH(boost::shared_ptr<BoulderScore> localScore, m_hitlist)
+  
+  BOOST_FOREACH(BoulderScorePair localScore, m_boulderScoreMap)
   {
-    if (localScore->IsTopHit())
+    if (localScore.second->IsTopHit())
     {
       nrOfTopHits++;
-      nrOfTopAttempts+=localScore->GetTopAttempts();
+      nrOfTopAttempts+=localScore.second->GetTopAttempts();
     }
-    if (localScore->IsBonusHit())
+    if (localScore.second->IsBonusHit())
     {
       nrOfBonusHits++;
-      nrOfBonusAttempts+=localScore->GetBonusAttempts();
+      nrOfBonusAttempts+=localScore.second->GetBonusAttempts();
     }
   }
   boost::scoped_ptr<TotalScore> thisTotal (new TotalScore(nrOfTopHits, nrOfTopAttempts, nrOfBonusHits, nrOfBonusAttempts));
-
   nrOfTopHits = 0;
   nrOfBonusHits = 0;
   nrOfTopAttempts = 0;
   nrOfBonusAttempts = 0;
-  BOOST_FOREACH(boost::shared_ptr<BoulderScore> localScore, otherScoreCard.m_hitlist)
+  BOOST_FOREACH(BoulderScorePair localScore, otherScoreCard.m_boulderScoreMap)
   {
-    if (localScore->IsTopHit())
+    if (localScore.second->IsTopHit())
     {
       nrOfTopHits++;
-      nrOfTopAttempts+=localScore->GetTopAttempts();
+      nrOfTopAttempts+=localScore.second->GetTopAttempts();
     }
-    if (localScore->IsBonusHit())
+    if (localScore.second->IsBonusHit())
     {
       nrOfBonusHits++;
-      nrOfBonusAttempts+=localScore->GetBonusAttempts();
+      nrOfBonusAttempts+=localScore.second->GetBonusAttempts();
     }
   }  
   boost::scoped_ptr<TotalScore> otherTotal (new TotalScore(nrOfTopHits, nrOfTopAttempts, nrOfBonusHits, nrOfBonusAttempts));  
   
-  return *thisTotal < *otherTotal;
+  if (*thisTotal == *otherTotal)
+  {
+    return m_polePosition > otherScoreCard.m_polePosition;
+  }
+  else
+  {
+    return *thisTotal < *otherTotal;
+  }
 }
 
 bool ScoreCard::operator>(const ScoreCard& otherScoreCard) const
@@ -106,19 +156,30 @@ bool ScoreCard::operator>(const ScoreCard& otherScoreCard) const
 
 void ScoreCard::printOn(std::ostream& strm) const
 {
-	strm << "<scorecard>" << std::endl;
-  strm << *m_climber;
-  BOOST_FOREACH(boost::shared_ptr<BoulderScore> localscore, m_hitlist)
+  strm << "<scorecard>" << std::endl;
+  strm << "<poleposition>" << m_polePosition << "</poleposition>" << std::endl;  
+  if (m_isEmpty)
   {
-    strm << *localscore;
+    strm << "<rank>-</rank>" << std::endl;       
+  }
+  else
+  {
+    strm << "<rank>" << m_rank << "</rank>" << std::endl;   
   }
   
-	strm << "</scorecard>" << std::endl;	
+  strm << *m_climber;
+
+  BOOST_FOREACH(BoulderScorePair localscore, m_boulderScoreMap)
+  {
+    strm << *(localscore.second);
+  }
+  strm << *GetTotalScore();
+  strm << "</scorecard>" << std::endl;	
 }
 
 std::ostream& operator<<(std::ostream& os, const ScoreCard& aScoreCard)
 {
-	aScoreCard.printOn(os);
+  aScoreCard.printOn(os);
   return os;
 }
 
