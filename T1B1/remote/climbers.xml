@@ -1,0 +1,1392 @@
+<scoredata>
+<event>
+<eventname>Boulder1</eventname>
+<phases>
+<phase>
+<phasename>Qualifications</phasename>
+<rounds>
+<round>
+<name>Dames</name>
+<roundfinished>Round not finished</roundfinished>
+<boulder>
+<number>1</number>
+</boulder>
+<boulder>
+<number>2</number>
+</boulder>
+<boulder>
+<number>3</number>
+</boulder>
+<boulder>
+<number>4</number>
+</boulder>
+<boulder>
+<number>5</number>
+</boulder>
+<boulder>
+<number>6</number>
+</boulder>
+<boulder>
+<number>7</number>
+</boulder>
+<boulder>
+<number>8</number>
+</boulder>
+<scorecards>
+<scorecard>
+<poleposition>0</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>9</startnumber>
+<climber>
+<firstname>Marta</firstname>
+<lastname>Shiryeva</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>2</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>3</startnumber>
+<climber>
+<firstname>Elisabeth</firstname>
+<lastname>Keijzer</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>3</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>12</startnumber>
+<climber>
+<firstname>Maartje</firstname>
+<lastname>van der Weijden</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>4</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>7</startnumber>
+<climber>
+<firstname>Lisa</firstname>
+<lastname>Sanders</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>5</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>11</startnumber>
+<climber>
+<firstname>Roelien</firstname>
+<lastname>van de Vrie</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>6</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>14</startnumber>
+<climber>
+<firstname>Vera</firstname>
+<lastname>Zijlstra</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>8</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>2</startnumber>
+<climber>
+<firstname>Iris</firstname>
+<lastname>Hoogendoorn</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>9</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>6</startnumber>
+<climber>
+<firstname>Anna</firstname>
+<lastname>Scott Miller</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+</scorecards>
+</round>
+<round>
+<name>Heren</name>
+<roundfinished>Round not finished</roundfinished>
+<boulder>
+<number>1</number>
+</boulder>
+<boulder>
+<number>2</number>
+</boulder>
+<boulder>
+<number>3</number>
+</boulder>
+<boulder>
+<number>4</number>
+</boulder>
+<boulder>
+<number>5</number>
+</boulder>
+<boulder>
+<number>6</number>
+</boulder>
+<boulder>
+<number>7</number>
+</boulder>
+<boulder>
+<number>8</number>
+</boulder>
+<scorecards>
+<scorecard>
+<poleposition>5</poleposition>
+<rank>1</rank>
+<enrolledclimber>
+<startnumber>67</startnumber>
+<climber>
+<firstname>Dirk</firstname>
+<lastname>Mol</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>Y</finished>
+<value>T1B1</value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>1T1 1B1</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>16</poleposition>
+<rank>2</rank>
+<enrolledclimber>
+<startnumber>64</startnumber>
+<climber>
+<firstname>Paul</firstname>
+<lastname>Kaufman</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>Y</finished>
+<value>T2B1</value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>1T2 1B1</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>1</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>85</startnumber>
+<climber>
+<firstname>Giel</firstname>
+<lastname>Wieggers</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>2</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>83</startnumber>
+<climber>
+<firstname>Jesse</firstname>
+<lastname>van der Werf</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>3</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>65</startnumber>
+<climber>
+<firstname>Teun</firstname>
+<lastname>Keusters</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>4</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>71</startnumber>
+<climber>
+<firstname>Tim</firstname>
+<lastname>Reuser</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>6</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>78</startnumber>
+<climber>
+<firstname>Casper</firstname>
+<lastname>ten Sijthoff</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>7</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>75</startnumber>
+<climber>
+<firstname>Elko</firstname>
+<lastname>Schellingerhout</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>10</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>70</startnumber>
+<climber>
+<firstname>Enrique</firstname>
+<lastname>Perdok</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>11</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>73</startnumber>
+<climber>
+<firstname>Wouter</firstname>
+<lastname>van Roessel</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>12</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>87</startnumber>
+<climber>
+<firstname>Jeroen</firstname>
+<lastname>van Zeeland</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>13</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>55</startnumber>
+<climber>
+<firstname>Niek</firstname>
+<lastname>Fransen</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>14</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>53</startnumber>
+<climber>
+<firstname>Robin</firstname>
+<lastname>van Dijk</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+<scorecard>
+<poleposition>15</poleposition>
+<rank>-</rank>
+<enrolledclimber>
+<startnumber>86</startnumber>
+<climber>
+<firstname>Jorrit</firstname>
+<lastname>van de Wiel</lastname>
+<nationality>NED</nationality>
+<sex>noinit</sex>
+</climber>
+</enrolledclimber>
+<boulderscore>
+<id>1</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>2</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>3</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>4</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>5</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>6</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>7</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<boulderscore>
+<id>8</id>
+<finished>N</finished>
+<value>    </value>
+</boulderscore>
+<totalscore>
+<nroftops></nroftops>
+<nrofbonusses></nrofbonusses>
+<nroftopattempts></nroftopattempts>
+<nrofbonusattempts></nrofbonusattempts>
+<stringvalue>0T0 0B0</stringvalue>
+</totalscore>
+</scorecard>
+</scorecards>
+</round>
+</rounds>
+</phase>
+</phases>
+</event>
+</scoredata>
